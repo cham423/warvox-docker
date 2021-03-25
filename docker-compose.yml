@@ -17,6 +17,7 @@ services:
       - ./postgres-data:/var/lib/postgresql/data
   warvox:
     image: sans1241/warvox
+    restart: unless-stopped
     environment:
       DB_PORT_5432_TCP_ADDR: db
       VOXUSER: warvox
